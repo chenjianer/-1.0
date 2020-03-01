@@ -6,40 +6,39 @@
 
 <script>
 export default {
-  name: 'App',
-  provide(){
+  name: "App",
+  provide() {
     return {
-      reload:this.reload
-    }
+      reload: this.reload
+    };
   },
-  data(){
-    return{
-      isRouterAlive:true
-    }
+  data() {
+    return {
+      isRouterAlive: true
+    };
   },
-  methods:{
+  methods: {
     /**刷新数据 */
-    reload(){
+    reload() {
       this.isRouterAlive = false;
-      this.$nextTick(function () {
-        this.isRouterAlive = true
-      })
+      this.$nextTick(function() {
+        this.isRouterAlive = true;
+      });
     }
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-  *{
-    margin: 0;
-    padding: 0;
-  }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 </style>

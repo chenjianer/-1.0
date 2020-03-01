@@ -11,6 +11,7 @@ const del = require('./router/del');
 const rmall = require('./router/rmall');
 const getOption = require('./router/getOption')
 const getOption2 = require('./router/getOption2')
+const getOption3 = require('./router/getOption3')
 const getfchart = require('./router/getfchart')
 const choose = require('./router/choose')
 const getchart = require('./router/getchart')
@@ -18,13 +19,11 @@ const change = require('./router/change')
 const getperdatas = require('./router/getperdatas')
 const setdatay = require('./router/setdatay')
 const uChart = require('./router/updateChart')
-const path = require('path')
-const static = require('koa-static')
+const getbaoma1 = require('./router/getbaoma1')
 const cors = require('koa2-cors');
 const app = new Koa();
 require('./token/proving');
 app.use(bodyparser());
-app.use(static(path.join(__dirname,'./public')));
 app.use(cors({
   origin: function(ctx) {
     if (ctx.url === '/login') {
@@ -58,6 +57,7 @@ router.use('/rmall', rmall);
 // 获取option
 router.use('/getOption', getOption);
 router.use('/getOption2', getOption2);
+router.use('/getOption3',getOption3)
 // 获取对应 highchart
 router.use('/getchart', getchart);
 // 获取对应月份的 highchart
@@ -69,6 +69,8 @@ router.use('/getperdatas', getperdatas);
 router.use('/setdatay', setdatay);
 /* 子路由 */
 router.use('/uChart', uChart);
+/* 子路由 */
+router.use('/getbaoma1', getbaoma1);
 
 app
   .use(router.routes())

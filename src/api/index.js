@@ -111,7 +111,58 @@ export default {
   },
   uChart12: () => {
     return axios.get('/uChart/12')
-  }
-
+  },
+  getOption3: (data) => {
+    return axios.post('/getOption3', { data })
+  },
+  /**宝马一系 */
+  getbaoma1: (data) => {
+    return axios.post('/getbaoma1/1', { data })
+  },
+  getbaoma2: (data) => {
+    return axios.post('/getbaoma1/2', { data })
+  },
+  getbaoma3: (data) => {
+    return axios.post('/getbaoma1/3', { data })
+  },
+  getbaoma4: (data) => {
+    return axios.post('/getbaoma1/4', { data })
+  },
+  getbaoma5: (data) => {
+    return axios.post('/getbaoma1/5', { data })
+  },
+  getbaoma6: (data) => {
+    return axios.post('/getbaoma1/6', { data })
+  },
+  getbaoma7: (data) => {
+    return axios.post('/getbaoma1/7', { data })
+  },
+  getbaoma8: (data) => {
+    return axios.post('/getbaoma1/8', { data })
+  },
+  getbaoma9: (data) => {
+    return axios.post('/getbaoma1/9', { data })
+  },
+  getbaoma10: (data) => {
+    return axios.post('/getbaoma1/10', { data })
+  },
+  getbaoma11: (data) => {
+    return axios.post('/getbaoma1/11', { data })
+  },
+  getbaoma12: (data) => {
+    return axios.post('/getbaoma1/12', { data })
+  },
+  getbaoma13: (data) => {
+    return axios.post('/getbaoma1/13', { data })
+  },
+  getbaoma14: (data) => {
+    return axios.post('/getbaoma1/14', { data })
+  },
+  getbaoma15: (data) => {
+    return axios.post('/getbaoma1/15', { data })
+  },
+  getbaoma16: (data) => {
+    return axios.post('/getbaoma1/16', { data })
+  },
 
 }

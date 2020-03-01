@@ -1,8 +1,8 @@
 <template>
   <div class="hello"> 
     <el-row>
-      <el-col>
-        <h1>欢迎使用广辰汽车销售服务配件管理系统</h1>
+      <el-col style="padding-left:350px">
+        <h1>欢迎使用</h1><img src="static/logo2.png" alt=""><h1>汽车配件服务管理系统</h1>
       </el-col>
       <el-row>
         <el-col :lg="{span:8,offset:8}" :xs="24" :md="{span:8,offset:8}" :sm="{span:12,offset:6}">
@@ -111,11 +111,16 @@ export default {
 
 <style scoped>
 .hello {
-  margin-top:170px;
+  margin-top:130px;
 }
 h1 {
   font-size: 35px;
-  margin-bottom: 40px;
-  color: #faf6f9
+  margin-bottom: 30px;
+  color: #faf6f9;
+  float: left;
+  line-height: 92px;
+}
+img{
+  float: left;
 }
 </style>

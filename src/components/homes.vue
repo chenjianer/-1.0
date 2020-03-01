@@ -11,10 +11,22 @@
           text-color="#fff"
           active-text-color="#ffd04b"
         >
+          <el-menu-item index="/homes" style="border-bottom:none"><img src="static/logo.png" alt=""></el-menu-item>
           <el-menu-item index="/homes">汽配列表项</el-menu-item>
           <el-menu-item index="/homes/two">添加仓储配件</el-menu-item>
-          <el-menu-item index="/homes/three">配件分类</el-menu-item>
-          <el-menu-item index="/homes/four">订单管理</el-menu-item>
+          <el-menu-item index="/homes/three">参数配置</el-menu-item>
+          <el-submenu index="/homes/four">
+            <template slot="title">订单管理</template>
+            <el-menu-item index="2-1">选项1</el-menu-item>
+            <el-menu-item index="2-2">选项2</el-menu-item>
+            <el-menu-item index="2-3">选项3</el-menu-item>
+            <el-submenu index="2-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="2-4-1">选项1</el-menu-item>
+              <el-menu-item index="2-4-2">选项2</el-menu-item>
+              <el-menu-item index="2-4-3">选项3</el-menu-item>
+            </el-submenu>
+          </el-submenu>
           <el-dropdown trigger="click" @command="handleCommand">
             <span class="n-m">当前用户：{{ user }}&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <el-dropdown-menu slot="dropdown">
@@ -30,9 +42,7 @@
       <el-main>
         <router-view></router-view>
       </el-main>
-      <el-footer>
-        Copyright/© 2019-4 Computer society competition aut/Errrl
-      </el-footer>
+      <el-footer>Copyright/© 2019-4 Computer society competition aut/Errrl</el-footer>
     </el-container>
   </div>
 </template>
